@@ -429,3 +429,11 @@ footer { text-align: center; padding: 28px; font-size: 12px; color: var(--text-m
   .rm-videos, .rm-img-row { grid-template-columns: 1fr; }
   .rm-img-pair { flex-direction: column; }
 }
+
+/* Full-width single screenshot */
+.rm-img-single { margin-top: 12px; }
+.rm-img-full {
+  width: 100%; border-radius: 10px;
+  border: 1px solid var(--border);
+  object-fit: contain; background: #fff;
+}
