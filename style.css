@@ -264,3 +264,100 @@ footer { text-align: center; padding: 28px; font-size: 12px; color: var(--text-m
   .cta-section { padding: 60px 16px; }
   .cta-section h2 { font-size: 26px; }
 }
+
+/* ── IMPACT CHART ── */
+.impact-chart { padding: 64px 48px; max-width: 1100px; margin: 0 auto; }
+.impact-bars { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
+.impact-row { display: flex; align-items: center; gap: 16px; }
+.impact-label {
+  width: 140px; flex-shrink: 0;
+  font-size: 12px; font-weight: 600; color: var(--text-muted);
+  text-align: right;
+}
+.impact-bar-wrap {
+  flex: 1; background: rgba(255,255,255,0.05);
+  border-radius: 6px; height: 36px; overflow: hidden;
+  border: 1px solid var(--border);
+}
+.impact-bar {
+  height: 100%; width: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius: 6px;
+  display: flex; align-items: center; padding-left: 14px;
+  transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+  white-space: nowrap; overflow: hidden;
+}
+.impact-bar span { font-size: 12px; font-weight: 700; color: #fff; }
+.impact-val {
+  width: 110px; flex-shrink: 0;
+  font-size: 13px; font-weight: 700; color: #fff;
+}
+
+/* ── TIMELINE ── */
+.timeline-section { padding: 80px 48px; max-width: 1100px; margin: 0 auto; }
+.timeline { position: relative; margin-top: 40px; padding-left: 32px; }
+.timeline::before {
+  content: ''; position: absolute;
+  left: 7px; top: 8px; bottom: 8px; width: 2px;
+  background: linear-gradient(180deg, var(--accent), var(--accent2), transparent);
+}
+.tl-item { position: relative; margin-bottom: 40px; }
+.tl-dot {
+  position: absolute; left: -29px; top: 6px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: 0 0 12px rgba(99,102,241,0.6);
+  flex-shrink: 0;
+}
+.tl-card {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px 28px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.tl-card:hover { border-color: rgba(99,102,241,0.35); transform: translateX(4px); }
+.tl-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 4px; }
+.tl-top h3 { font-size: 15px; font-weight: 700; color: #fff; }
+.tl-date {
+  font-size: 11px; color: var(--text-muted); white-space: nowrap;
+  background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+  padding: 4px 12px; border-radius: 20px; height: fit-content; flex-shrink: 0;
+}
+.tl-role { font-size: 12px; color: var(--accent); font-weight: 600; margin-bottom: 14px; }
+.tl-card ul { padding-left: 18px; }
+.tl-card ul li { font-size: 13px; color: #cbd5e1; margin-bottom: 7px; line-height: 1.65; }
+.tl-card ul li::marker { color: var(--accent); }
+
+/* ── SKILL BARS ── */
+.skillbars-section { padding: 80px 48px; background: var(--dark2); }
+.skillbars-grid {
+  max-width: 1100px; margin: 32px auto 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px 48px;
+}
+.skillbar-item { display: flex; flex-direction: column; gap: 8px; }
+.skillbar-top { display: flex; justify-content: space-between; align-items: baseline; }
+.skillbar-name { font-size: 13px; font-weight: 600; color: #fff; }
+.skillbar-level { font-size: 11px; color: var(--accent); font-weight: 600; }
+.skillbar-track {
+  height: 6px; background: rgba(255,255,255,0.07);
+  border-radius: 6px; overflow: hidden;
+}
+.skillbar-fill {
+  height: 100%; width: 0; border-radius: 6px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.skillbar-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+.skillbar-tag {
+  font-size: 11px; color: var(--text-muted);
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  padding: 2px 9px; border-radius: 10px;
+}
+
+/* ── RESPONSIVE additions ── */
+@media (max-width: 768px) {
+  .impact-chart { padding: 48px 16px; }
+  .impact-label { width: 90px; font-size: 11px; }
+  .timeline-section { padding: 48px 16px; }
+  .skillbars-section { padding: 48px 16px; }
+  .skillbars-grid { grid-template-columns: 1fr; }
+}
