@@ -58,3 +58,33 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
+
+// Impact bars animation
+function animateBars(selector, attr, prop) {
+  document.querySelectorAll(selector).forEach(el => {
+    el.style[prop] = el.dataset[attr] + '%';
+  });
+}
+
+const impactObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      animateBars('.impact-bar', 'width', 'width');
+      impactObserver.disconnect();
+    }
+  });
+}, { threshold: 0.3 });
+const impactSection = document.querySelector('.impact-chart');
+if (impactSection) impactObserver.observe(impactSection);
+
+// Skill bars animation
+const skillObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      animateBars('.skillbar-fill', 'fill', 'width');
+      skillObserver.disconnect();
+    }
+  });
+}, { threshold: 0.2 });
+const skillSection = document.querySelector('.skillbars-section');
+if (skillSection) skillObserver.observe(skillSection);
