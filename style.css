@@ -21,7 +21,7 @@ body {
   line-height: 1.65;
 }
 
-/* â”€â”€ NAV â”€â”€ */
+/* ── NAV ── */
 nav {
   position: sticky; top: 0; z-index: 100;
   display: flex; justify-content: space-between; align-items: center;
@@ -43,7 +43,7 @@ nav {
 }
 .btn-download:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 0 28px rgba(99,102,241,0.5) !important; }
 
-/* â”€â”€ HERO â”€â”€ */
+/* ── HERO ── */
 .hero {
   min-height: 100vh;
   display: flex; flex-direction: column;
@@ -53,6 +53,21 @@ nav {
   background: radial-gradient(ellipse at 50% 0%, rgba(99,102,241,0.15) 0%, transparent 70%);
   position: relative;
 }
+/* ── HERO PHOTO ── */
+.hero-photo {
+  width: 130px; height: 130px;
+  border-radius: 50%;
+  object-fit: cover; object-position: center top;
+  border: 3px solid transparent;
+  background: linear-gradient(var(--dark), var(--dark)) padding-box,
+              linear-gradient(135deg, var(--accent), var(--accent2)) border-box;
+  box-shadow: 0 0 32px rgba(99,102,241,0.35);
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .hero-photo { width: 100px; height: 100px; }
+}
+
 .hero-badge {
   display: inline-block;
   background: rgba(99,102,241,0.15); border: 1px solid rgba(99,102,241,0.3);
@@ -88,7 +103,7 @@ nav {
 }
 @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }
 
-/* â”€â”€ METRICS â”€â”€ */
+/* ── METRICS ── */
 .metrics { padding: 80px 48px; background: var(--dark2); }
 .metrics-inner {
   max-width: 1100px; margin: 0 auto;
@@ -108,7 +123,7 @@ nav {
 .metric-unit { font-size: 18px; font-weight: 600; color: var(--accent); }
 .metric-card p { font-size: 12px; color: var(--text-muted); margin-top: 8px; }
 
-/* â”€â”€ HOW I THINK â”€â”€ */
+/* ── HOW I THINK ── */
 .thinking { padding: 80px 48px; max-width: 1100px; margin: 0 auto; }
 .thinking-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 32px; }
 .think-card {
@@ -121,7 +136,7 @@ nav {
 .think-card strong { display: block; font-size: 15px; margin-bottom: 8px; color: #fff; }
 .think-card p { font-size: 13px; color: var(--text-muted); }
 
-/* â”€â”€ PROJECTS â”€â”€ */
+/* ── PROJECTS ── */
 .projects { padding: 80px 48px; background: var(--dark2); }
 .projects-grid {
   max-width: 1100px; margin: 32px auto 0;
@@ -143,7 +158,7 @@ nav {
 .project-card p { font-size: 13px; color: var(--text-muted); }
 .project-cta { display: inline-block; margin-top: 14px; font-size: 12px; color: var(--accent); font-weight: 600; }
 
-/* â”€â”€ MODAL â”€â”€ */
+/* ── MODAL ── */
 .modal {
   display: none; position: fixed; inset: 0;
   background: rgba(0,0,0,0.7); backdrop-filter: blur(6px);
@@ -164,14 +179,14 @@ nav {
 #modal-title { font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #fff; }
 #modal-desc { font-size: 14px; color: var(--text-muted); line-height: 1.8; }
 
-/* â”€â”€ SECTION TITLE â”€â”€ */
+/* ── SECTION TITLE ── */
 .section-title {
   font-size: 13px; font-weight: 700; text-transform: uppercase;
   letter-spacing: 1.5px; color: var(--accent);
   margin-bottom: 8px;
 }
 
-/* â”€â”€ EXPERIENCE â”€â”€ */
+/* ── EXPERIENCE ── */
 .experience { padding: 80px 48px; max-width: 1100px; margin: 0 auto; }
 .job-card {
   background: var(--card-bg); border: 1px solid var(--border);
@@ -191,7 +206,7 @@ nav {
 .job-card ul li { font-size: 13px; color: #cbd5e1; margin-bottom: 7px; line-height: 1.65; }
 .job-card ul li::marker { color: var(--accent); }
 
-/* â”€â”€ SKILLS â”€â”€ */
+/* ── SKILLS ── */
 .skills-section { padding: 80px 48px; background: var(--dark2); }
 .skills-grid {
   max-width: 1100px; margin: 32px auto 0;
@@ -206,7 +221,7 @@ nav {
 .skill-lbl { display: block; font-size: 12px; font-weight: 700; color: #fff; margin-bottom: 6px; }
 .skill-block span:last-child { font-size: 12px; color: var(--text-muted); }
 
-/* â”€â”€ EDUCATION â”€â”€ */
+/* ── EDUCATION ── */
 .edu-section { padding: 80px 48px; max-width: 1100px; margin: 0 auto; }
 .edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 32px; }
 .edu-card {
@@ -217,7 +232,7 @@ nav {
 .edu-card strong { display: block; font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 4px; }
 .edu-card span { font-size: 13px; color: var(--text-muted); }
 
-/* â”€â”€ CTA â”€â”€ */
+/* ── CTA ── */
 .cta-section {
   padding: 100px 48px; text-align: center;
   background: radial-gradient(ellipse at 50% 100%, rgba(99,102,241,0.15) 0%, transparent 70%);
@@ -243,10 +258,10 @@ nav {
   font-family: 'Calibri', 'Arial', sans-serif;
 }
 
-/* â”€â”€ FOOTER â”€â”€ */
+/* ── FOOTER ── */
 footer { text-align: center; padding: 28px; font-size: 12px; color: var(--text-muted); border-top: 1px solid var(--border); }
 
-/* â”€â”€ RESPONSIVE â”€â”€ */
+/* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   nav { padding: 12px 16px; }
   .nav-links { gap: 12px; }
@@ -265,7 +280,7 @@ footer { text-align: center; padding: 28px; font-size: 12px; color: var(--text-m
   .cta-section h2 { font-size: 26px; }
 }
 
-/* â”€â”€ IMPACT CHART â”€â”€ */
+/* ── IMPACT CHART ── */
 .impact-chart { padding: 64px 48px; max-width: 1100px; margin: 0 auto; }
 .impact-bars { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
 .impact-row { display: flex; align-items: center; gap: 16px; }
@@ -293,7 +308,7 @@ footer { text-align: center; padding: 28px; font-size: 12px; color: var(--text-m
   font-size: 13px; font-weight: 700; color: #fff;
 }
 
-/* â”€â”€ TIMELINE â”€â”€ */
+/* ── TIMELINE ── */
 .timeline-section { padding: 80px 48px; max-width: 1100px; margin: 0 auto; }
 .timeline { position: relative; margin-top: 40px; padding-left: 32px; }
 .timeline::before {
@@ -327,7 +342,7 @@ footer { text-align: center; padding: 28px; font-size: 12px; color: var(--text-m
 .tl-card ul li { font-size: 13px; color: #cbd5e1; margin-bottom: 7px; line-height: 1.65; }
 .tl-card ul li::marker { color: var(--accent); }
 
-/* â”€â”€ SKILL BARS â”€â”€ */
+/* ── SKILL BARS ── */
 .skillbars-section { padding: 80px 48px; background: var(--dark2); }
 .skillbars-grid {
   max-width: 1100px; margin: 32px auto 0;
@@ -353,11 +368,64 @@ footer { text-align: center; padding: 28px; font-size: 12px; color: var(--text-m
   padding: 2px 9px; border-radius: 10px;
 }
 
-/* â”€â”€ RESPONSIVE additions â”€â”€ */
+/* ── RESPONSIVE additions ── */
 @media (max-width: 768px) {
   .impact-chart { padding: 48px 16px; }
   .impact-label { width: 90px; font-size: 11px; }
   .timeline-section { padding: 48px 16px; }
   .skillbars-section { padding: 48px 16px; }
   .skillbars-grid { grid-template-columns: 1fr; }
+}
+
+/* ── RICH MODAL ── */
+.rich-modal-content {
+  max-width: 760px;
+  max-height: 88vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+.rm-tag {
+  display: inline-block; font-size: 11px; font-weight: 600;
+  color: var(--accent); background: rgba(59,130,246,0.1);
+  border: 1px solid rgba(59,130,246,0.2);
+  padding: 3px 10px; border-radius: 12px; margin-bottom: 14px;
+}
+.rm-title { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.rm-sub { font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 18px; }
+.rm-body { font-size: 14px; color: var(--text-muted); line-height: 1.8; margin-bottom: 14px; }
+.rm-body strong { color: #fff; }
+.rm-bullets { padding-left: 20px; margin-bottom: 18px; }
+.rm-bullets li { font-size: 13px; color: #cbd5e1; margin-bottom: 8px; line-height: 1.7; }
+.rm-bullets li::marker { color: var(--accent); }
+
+/* Video section */
+.rm-video-section { margin-top: 24px; }
+.rm-video-label {
+  font-size: 12px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--accent); margin-bottom: 14px;
+}
+.rm-videos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.rm-video-wrap { display: flex; flex-direction: column; gap: 8px; }
+.rm-vid-caption { font-size: 11px; color: var(--text-muted); font-weight: 600; text-align: center; }
+.rm-video {
+  width: 100%; border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #000;
+}
+
+/* Image compare section */
+.rm-compare { margin-top: 24px; }
+.rm-img-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.rm-img-wrap { display: flex; flex-direction: column; gap: 8px; }
+.rm-img-pair { display: flex; gap: 8px; }
+.rm-img {
+  width: 100%; border-radius: 10px;
+  border: 1px solid var(--border);
+  object-fit: contain; background: #fff;
+}
+
+@media (max-width: 600px) {
+  .rm-videos, .rm-img-row { grid-template-columns: 1fr; }
+  .rm-img-pair { flex-direction: column; }
 }
