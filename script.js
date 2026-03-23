@@ -176,7 +176,6 @@ const richModals = {
         <li>Weblabs and A/B testing used to validate and scale high-confidence initiatives</li>
         <li>Built real-time tracking infrastructure to maintain visibility across the full portfolio</li>
       </ul>
-      <p class="rm-body">This program demonstrated what senior program ownership looks like in practice — not just managing delivery, but removing blockers, making technical trade-offs, and keeping a complex portfolio moving under pressure.</p>
     `
   },
   op: {
